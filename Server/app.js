@@ -8,10 +8,18 @@ const mongoose = require("mongoose");
 const server = http.createServer(app);
 const userRouter = require("./routes/user");
 const productRouter = require("./routes/product");
+const orderRouter = require("./routes/order");
+const cartRouter = require("./routes/cart");
 
 //////-------------------------------------------------------------------------------------------------/////
 
-app.use(cors());
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "http://localhost:3001"],
+    // methods: ["POST", "PUT", "GET", "OPTIONS", "HEAD", "DELETE", "PATCH"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 const session = require("express-session");
@@ -36,12 +44,11 @@ app.use(
   })
 );
 
-app.get("/", (req, res, next) => {
-  res.json("OK");
-});
+app.use("/uploads", express.static("uploads"));
 app.use("/auth", userRouter);
-app.use("/api", productRouter);
-
+app.use("/products", productRouter);
+app.use("/orders", orderRouter);
+app.use("/carts", cartRouter);
 
 // Đăng ký middleware xử lý lỗi
 app.use((err, req, res, next) => {

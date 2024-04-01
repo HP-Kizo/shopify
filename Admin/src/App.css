@@ -1,0 +1,303 @@
+.App {
+  text-align: center;
+}
+* {
+  font-family: "Lato", sans-serif;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+html {
+  font-size: 10px;
+}
+.catogery a:hover {
+  opacity: 0.6;
+}
+.background {
+  background-color: black;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#popup {
+  margin-top: 90px;
+  height: 70vh;
+}
+.name_product {
+  padding-top: 40px;
+}
+.background {
+  background-color: rgba(0, 0, 0, 0.756);
+}
+.close_popup {
+  position: absolute;
+  top: 15%;
+  right: 8%;
+}
+.text_product {
+  overflow: auto;
+}
+button img {
+  animation: zoom 0.7s;
+}
+@keyframes zoom {
+  0% {
+    transform: scale(0.6);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.deco {
+  position: absolute;
+  background-color: azure;
+  top: 0;
+  width: 100px;
+}
+.live_chat {
+  position: fixed;
+
+  bottom: 5%;
+  max-width: 60px !important;
+  left: 90%;
+  padding: 4px;
+  background: transparent;
+}
+.bi-messenger {
+  border-radius: 50%;
+}
+#box_chat {
+  position: fixed;
+  top: 30%;
+  left: 65%;
+  animation: chat 0.7s;
+}
+@keyframes chat {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#search {
+  /* position: absolute;
+  top: 32%;
+  left: 38%;
+  width: 50%; */
+  height: 30px;
+  margin-top: 26px;
+}
+
+.quantity {
+  position: relative;
+}
+.down_quantity {
+  position: absolute;
+  left: 40%;
+}
+.up_quantity {
+  position: absolute;
+  top: 0;
+  left: 65%;
+}
+.quantityItem {
+  position: absolute;
+  top: 0;
+  left: 55%;
+  padding: 0;
+}
+
+@media (min-width: 650px) and (max-width: 1024px) {
+  #img_banner {
+    transform: translateY(30%);
+  }
+
+  #text_banner {
+    transform: scale(0.8);
+    top: 30%;
+  }
+}
+.item_price {
+  transform: translateY(-25%);
+}
+
+@media (max-width: 776px) {
+  .item_price {
+    transform: translateY(-18%);
+  }
+}
+
+@media (max-width: 650px) {
+  #img_banner {
+    transform: translateY(30%);
+  }
+
+  #text_banner {
+    transform: scale(0.8);
+    top: 18%;
+  }
+}
+@media (max-width: 500px) {
+  #img_banner {
+    transform: translateY(30%);
+  }
+
+  #text_banner {
+    transform: scale(0.4);
+    top: 18%;
+    left: 0%;
+  }
+}
+
+.product_input {
+  height: 40px;
+}
+
+.short_text_popup {
+  height: 180px;
+  overflow: scroll;
+}
+
+@media (min-width: 992px) {
+  .short_text_popup {
+    height: 180px;
+    overflow: scroll;
+  }
+  #popup {
+    margin-left: 5vh;
+    margin-right: 5vh;
+  }
+}
+.noibat {
+  height: 200px;
+}
+
+.cartIcon {
+  position: relative;
+}
+.icon {
+  padding-right: 5px;
+}
+.cart_number {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  color: #fff;
+  font-size: 10px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #dd1c1a;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  z-index: 1;
+  display: none;
+}
+.has-cart {
+  display: flex;
+}
+
+.dots-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin-top: 120px;
+  margin-bottom: 1000px;
+}
+
+.dot {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  border-radius: 10px;
+  background-color: #b3d4fc;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.dot:last-child {
+  margin-right: 0;
+}
+
+.dot:nth-child(1) {
+  animation-delay: -0.3s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: -0.1s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.1s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    background-color: #b3d4fc;
+    box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+  }
+
+  50% {
+    transform: scale(1.2);
+    background-color: #6793fb;
+    box-shadow: 0 0 0 10px rgba(178, 212, 252, 0);
+  }
+
+  100% {
+    transform: scale(0.8);
+    background-color: #b3d4fc;
+    box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+  }
+}

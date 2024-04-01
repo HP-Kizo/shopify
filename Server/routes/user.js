@@ -30,10 +30,29 @@ const validateData = {
 
 router.post("/login", validateData.validateLogin, userController.postLogin);
 
+router.post("/register", validateData.validateRegister);
+
+router.get("/logout", userController.getLogout);
+
+//------ADMIN ------------------------
+
 router.post(
-  "/register",
-  validateData.validateRegister,
-  userController.postRegister
+  "/admin/login",
+  validateData.validateLogin,
+  userController.adminLogin
 );
+
+router.post(
+  "/admin/register",
+  userController.postRegister,
+  userController.adminRegister
+);
+
+router.get("/admin/logout", userController.adminLogout);
+
+
+//------ADVISOR ------------------------
+
+router.post("advisor/login", userController.adminLogin);
 
 module.exports = router;
